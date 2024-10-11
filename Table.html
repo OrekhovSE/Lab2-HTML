@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="utf-8">
+        <title> 1 Zadanie</title>
+    </head>
+    
+    <body>
+        <h2> Морская живность в Японском море</h2>
+        <a href="http://127.0.0.1:5500/Main.html"> Главная </a>
+        
+        <a href="http://127.0.0.1:5500/Table.html"> Список живности </a> 
+
+        <hr>
+        
+            <details>
+                <summary> График </summary>
+                <fieldset >
+                    <legend> Значение по оси OX: </legend>
+                      <input type="radio" name="inputGraph" value="0"> Тип <br>
+                      <input type="radio" name="inputGraph" value="1"> Семейство<br>
+                </fieldset>
+
+                <fieldset>
+                    <legend> Результат: </legend>
+                      <input type="checkbox" name="resultGraph" value="0"> Максимальная глубина  <br>
+                      <input type="checkbox" name="resultGraph" value="1"> Минимальная глубина <br>
+                      <input type="checkbox" name="resultGraph" value="2"> Количество вив, занесенных в красную книгу <br>
+                </fieldset>
+            </details>
+
+
+            <details>
+                <summary> Фильтр </summary>
+
+
+                <form>
+                    <label>Тип: <select name="phylum">
+                        <option value="0"> все </option>
+                        <option value="1"> Членистоногие </option>
+                        <option value="2" > Хорвые </option>
+                        <option value="3"> Моллюски </option>
+                        <option value="4"> Иглокожие </option>
+                    </select>
+                    </label>
+               </form>
+                
+               <form>
+                <label>Семейство :
+                    <input type = "text" id = "family">
+                </label>
+            </form>
+
+                <form>
+                    <label>Вид :
+                        <input type = "text" id = "species">
+                    </label>
+                </form>
+
+                <form>
+                    <label>Глубина от
+                        <input type = "text" id = "deepMin">
+                    </label>
+
+                    <label> до
+                        <input type = "text" id = "deepMax">
+                        метров
+                    </label>
+                </form>
+
+                <form>
+                    <fieldset >
+                      <legend> Занесен в красную книгу: </legend>
+                        <input type="checkbox" name="redbook" value="0"> да <br>
+                        <input type="checkbox" name="redbook" value="1"> нет<br>
+                        <input type="checkbox" name="redbook" value="2"> невымерший <br>
+                        <input type="checkbox" name="redbook" value="3"> Вызывающие наименьшие опасения <br>
+                        <input type="checkbox" name="redbook" value="3"> Предположительно вымерший на Рф <br>
+                     </fieldset>
+                 </form>
+
+
+            </details>
+        
+
+        
+            <details>
+                <summary> Сортировка </summary>
+
+                <form>
+                    <label>Первый уровень: <select name="sort1">
+                        <option value="0"> Нет </option>
+                        <option value="1"> Тип </option>
+                        <option value="2" > Семейство </option>
+                        <option value="3"> Минимальная глубина от (метров) </option>
+                        <option value="4"> Максимальная глубина до (метров) </option>
+                        <option value="5"> Красная книгу </option>
+                    </select>
+                    </label>
+
+                    <label>
+                        по убыванию? <input type="checkbox" id = "descending1">
+                    </label>
+               </form>
+
+               <form>
+                <label>Второй уровень: <select name="sort2">
+                    <option value="0"> Нет </option>
+                    <option value="1"> Тип </option>
+                    <option value="2" > Семейство </option>
+                    <option value="3"> Минимальная глубина от (метров) </option>
+                    <option value="4"> Максимальная глубина до (метров) </option>
+                    <option value="5"> Красная книгу </option>
+                </select>
+                </label>
+
+                <label>
+                    по убыванию? <input type="checkbox" id = "descending2">
+                </label>
+           </form>
+
+           <form>
+            <label>Третий уровень: <select name = "sort3">
+                <option value="0"> Нет </option>
+                <option value="1"> Тип </option>
+                <option value="2" > Семейство </option>
+                <option value="3"> Минимальная глубина от (метров)</option>
+                <option value="4"> Максимальная глубина до (метров)</option>
+                <option value="5"> Красная книгу </option>
+            </select>
+
+            </label>
+
+            <label>
+                по убыванию? <input type="checkbox" id = "descending3">
+            </label>
+       </form>
+            </details>
+        
+            
+                
+                   
+        
+
+        <table border="1" cellspacing="0">
+        <tr>
+            <th>Тип</th>
+            <th>Семейство</th>
+            <th >Вид</th>
+            <th>Предпочительная глубина обитания  от(метров)</th>
+            <th>Предпочительная глубина обитания  до (метров)</th>
+            <th>Занесен в красную книгу</th>
+        </tr>
+
+        <tr>
+            <td> Членистоногие</td>
+            <td> Крабоиды</td>
+            <td> Камчатский краб</td>
+            <td> 5</td>
+            <td> 550</td>
+            <td> нет </td>
+        </tr>
+
+        <tr>
+            <td> Хорвые</td>
+            <td> Тресковые</td>
+            <td> Минтай</td>
+            <td> 200</td>
+            <td> 300</td>
+            <td> нет </td>
+        </tr>
+
+        <tr>
+            <td> Хорвые</td>
+            <td> Лососёвые</td>
+            <td> Тихоокеанский лосось</td>
+            <td> 200 </td>
+            <td> 300</td>
+            <td> нет </td>
+        </tr>
+
+        <tr>
+            <td> Хорвые</td>
+            <td> Камбаловые</td>
+            <td> Камбала белобрюхая</td>
+            <td> 5 </td>
+            <td> 110</td>
+            <td> нет </td>
+        </tr>
+
+        <tr>
+            <td> Хорвые</td>
+            <td> Тресковые</td>
+            <td> Дальневосточная навага</td>
+            <td> 30 </td>
+            <td> 60 </td>
+            <td> нет </td>
+        </tr>
+
+        <tr>
+            <td> Хорвые</td>
+            <td> Морские лисички</td>
+            <td> Морская лисичкя</td>
+            <td> 15 </td>
+            <td> 126 </td>
+            <td> невымерший </td>
+        </tr>
+
+        <tr>
+            <td> Хорвые</td>
+            <td> Рогатковые</td>
+            <td> Четырёхрогий керчак</td>
+            <td> 350 </td>
+            <td> 550</td>
+            <td> Вызывающие наименьшие опасения </td>
+        </tr>
+
+        <tr>
+            <td> Хорвые</td>
+            <td> Скумбриевые</td>
+            <td> Скумбрия</td>
+            <td> 150</td>
+            <td> 250 </td>
+            <td> нет </td>
+        </tr>
+
+        <tr>
+            <td> Хорвые</td>
+            <td> Сельдевые</td>
+            <td> Дальневосточная сардина(иваси)</td>
+            <td> 0</td>
+            <td> 200</td>
+            <td> нет </td>
+        </tr>
+
+        <tr>
+            <td> Хорвые</td>
+            <td> Макрелещуковые</td>
+            <td> Сайра </td>
+            <td> 0 </td>
+            <td> 230</td>
+            <td> нет </td>
+        </tr>
+        
+        <tr>
+            <td> Моллюски</td>
+            <td> Митилиды</td>
+            <td> Мидия</td>
+            <td>  1</td>
+            <td>   20 </td>
+            <td> нет </td>
+        </tr>
+
+        <tr>
+            <td> Моллюски</td>
+            <td> Устрицы</td>
+            <td> Устрица</td>
+            <td>  1</td>
+            <td>   100 </td>
+            <td> нет </td>
+        </tr>
+
+        <tr>
+            <td> Моллюски</td>
+            <td> Морские гребешки </td>
+            <td> Морские гребешки </td>
+            <td>  1</td>
+            <td>  80 </td>
+            <td> нет </td>
+        </tr>
+
+        <tr>
+            <td> Иглокожие </td>
+            <td> Иглокожие </td>
+            <td> Морской еж </td>
+            <td>  1</td>
+            <td>  200 </td>
+            <td> нет </td>
+        </tr>
+
+        <tr>
+            <td> Хорвые </td>
+            <td> Анчоусовые </td>
+            <td> Японский анчоус </td>
+            <td>  1</td>
+            <td>   420 </td>
+            <td> нет </td>
+        </tr>
+
+        <tr>
+            <td> Членистоногие </td>
+            <td> Грапсиды </td>
+            <td> Дальневосточный краб-хелице </td>
+            <td>  1</td>
+            <td>  420 </td>
+            <td> да </td>
+        </tr>
+
+        <tr>
+            <td> Моллюски </td>
+            <td> Ишнохитоновые </td>
+            <td> Лепизона Андрияшева </td>
+            <td>  1</td>
+            <td>  420 </td>
+            <td> да </td>
+        </tr>
+
+        <tr>
+            <td> Моллюски </td>
+            <td> Мопалиевые </td>
+            <td> Мопалия Мидденрфа </td>
+            <td>  1</td>
+            <td>  420 </td>
+            <td> да </td>
+        </tr>
+
+        <tr>
+            <td> Моллюски </td>
+            <td> Мопалиевые </td>
+            <td> Амикула Гурьяновой </td>
+            <td>  1</td>
+            <td>  420 </td>
+            <td> да </td>
+        </tr>
+
+        <tr>
+            <td> Моллюски </td>
+            <td> Фиссурелловые </td>
+            <td> Гигантская сцелима</td>
+            <td>  1</td>
+            <td> 420 </td>
+            <td> да </td>
+        </tr>
+
+        <tr>
+            <td> Моллюски </td>
+            <td> Галииды (Морские ушки)</td>
+            <td> Дисковидное морское ушко </td>
+            <td>  1</td>
+            <td>  420 </td>
+            <td> да </td>
+        </tr>
+
+        <tr>
+            <td> Моллюски </td>
+            <td> Лтииды </td>
+            <td> Узкое морское блюдечко  </td>
+            <td>  1</td>
+            <td>  420 </td>
+            <td> да </td>
+        </tr>
+
+        <tr>
+            <td> Моллюски  </td>
+            <td> Мурициды </td>
+            <td> Цератостома Барнетта </td>
+            <td>  1</td>
+            <td>  420 </td>
+            <td> да </td>
+        </tr>
+
+        <tr>
+            <td> Моллюски </td>
+            <td> Мурициды </td>
+            <td> Венозная рапана (популяции Японского моря) </td>
+            <td>  1</td>
+            <td>  420 </td>
+            <td> да </td>
+        </tr>
+
+        <tr>
+            <td> Моллюски </td>
+            <td> Мурициды </td>
+            <td> Японский японактеон </td>
+            <td>  1</td>
+            <td>  420 </td>
+            <td> да </td>
+        </tr>
+
+        <tr>
+            <td> Хорвые </td>
+            <td> Лососевые </td>
+            <td> Сахалинский таймень  </td>
+            <td>  1</td>
+            <td>  420 </td>
+            <td> да </td>
+        </tr>
+
+        <tr>
+            <td> Хорвые </td>
+            <td> Осетровые </td>
+            <td> Сахалинский осетр </td>
+            <td>  1</td>
+            <td>  420 </td>
+            <td> да </td>
+        </tr>
+
+        <tr>
+            <td> Хорвые </td>
+            <td> Лососевые </td>
+            <td> Микижа </td>
+            <td>  1</td>
+            <td>  420 </td>
+            <td> да </td>
+        </tr>
+
+
+
+        
+
+        </table>
+        
+    </body>
+</html>
